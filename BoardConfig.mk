@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_FOLDER := device/amlogic/u212
+DEVICE_FOLDER := device/jio/franklin
 
 # Architecture
 TARGET_ARCH := arm
@@ -43,14 +43,15 @@ USE_OPENGL_RENDERER := true
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/zImage
+TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/kernel
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_FOLDER)/prebuilt/dtbo.img
 
 # Kernel CMDLINE
 BOARD_KERNEL_CMDLINE := \
-    androidboot.dtbo_idx=0 \
+    androidboot.dtbo_idx=0 --cmdline root=/dev/mmcblk0p18 \
     buildvariant=eng
+
 
 # MKBOOTIMG Args
 BOARD_MKBOOTIMG_ARGS := \
@@ -60,7 +61,7 @@ BOARD_MKBOOTIMG_ARGS := \
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01000000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01800000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x02000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x80000000
 
 # Workaround for error copying vendor files to recovery ramdisk
@@ -97,7 +98,7 @@ TW_NO_BATT_PERCENT := true
 TW_NO_SCREEN_TIMEOUT := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_NO_LEGACY_PROPS := true
-TW_DEVICE_VERSION := $(shell date '+%Y%m%d') by KostyaJRZ
+TW_DEVICE_VERSION := $(shell date '+%Y%m%d') by noob-bash
 
 # Platform version
 PLATFORM_VERSION := 16.1.0

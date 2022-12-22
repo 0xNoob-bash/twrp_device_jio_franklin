@@ -13,7 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_u212.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_franklin.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_u212-userdebug
+    omni_franklin-userdebug \
+    omni_franklin-eng

@@ -27,4 +27,4 @@
 /dev/block/mmcblk2p5    /sdcard vfat    defaults    defaults
 /dev/block/mmcblk2p6    /sdcard vfat    defaults    defaults
 /dev/block/mmcblk    /sdcard vfat    defaults    defaults
-/dev/block/sd##         /udisk  auto    defaults    defaults
+#/dev/block/sd##         /udisk  auto    defaults    defaults

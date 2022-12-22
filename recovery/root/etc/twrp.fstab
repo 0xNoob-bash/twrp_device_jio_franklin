@@ -22,5 +22,4 @@
 /data           ext4    /dev/block/data
 
 # Removable storage
-/external_sd    auto    /dev/block/mmcblk1p1   flags=storage;wipeingui;removable
 /usb-otg        auto    /dev/block/sda1        flags=storage;wipeingui;removable
